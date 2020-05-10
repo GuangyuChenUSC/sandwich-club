@@ -35,7 +35,7 @@ public class JsonUtils {
             List<String> ingredients = populateList(ingredientArray);
             return new Sandwich(name, alsoKnownAs, placeOfOrigin, description, image, ingredients);
         } catch (JSONException e) {
-            Log.e(LOG_TAG, "Exception occurred while parsing json", e);
+            Log.e(LOG_TAG, "Exception for parsing json", e);
         }
         return null;
     }

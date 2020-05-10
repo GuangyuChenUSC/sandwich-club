@@ -17,13 +17,6 @@ public class DetailActivity extends AppCompatActivity {
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
 
-    private TextView originTv;
-    private TextView alsoKnownAsTv;
-    private TextView ingredientsTv;
-    private TextView placeOfOriginTv;
-    private TextView descriptionTv;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,19 +59,19 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI(Sandwich sandwich) {
-        originTv = (TextView) findViewById(R.id.origin_tv);
+        TextView originTv = (TextView) findViewById(R.id.origin_tv);
         originTv.setText(sandwich.getMainName());
 
-        alsoKnownAsTv = (TextView) findViewById(R.id.also_known_tv);
+        TextView alsoKnownAsTv = (TextView) findViewById(R.id.also_known_tv);
         alsoKnownAsTv.setText(TextUtils.join(", ", sandwich.getAlsoKnownAs()));
 
-        ingredientsTv = (TextView) findViewById(R.id.ingredients_tv);
+        TextView ingredientsTv = (TextView) findViewById(R.id.ingredients_tv);
         ingredientsTv.setText(TextUtils.join(", ", sandwich.getIngredients()));
 
-        placeOfOriginTv = (TextView) findViewById(R.id.place_of_origin_tv);
+        TextView placeOfOriginTv = (TextView) findViewById(R.id.place_of_origin_tv);
         placeOfOriginTv.setText(sandwich.getPlaceOfOrigin());
 
-        descriptionTv = (TextView) findViewById(R.id.description_tv);
+        TextView descriptionTv = (TextView) findViewById(R.id.description_tv);
         descriptionTv.setText(sandwich.getDescription());
     }
 }
